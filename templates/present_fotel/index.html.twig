@@ -1,0 +1,87 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Présentation de Fotel{% endblock %}
+
+{% block body %}
+
+{# <section class="hero-section">
+  <div class="container text-center">
+    <h1 class="hero-title title">Fortuna</h1>
+    {# <a href="{{ path('reservation') }}" class="btn btn-light hero-button">Réserver une chambre</a> 
+  </div>
+</section> #}
+
+<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+  <div class="carousel-indicators">
+    {% set index = 0 %}
+    {% for slide in slides %}
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="{{ index }}" {% if loop.first %}class="active" aria-current="true" {% endif %} aria-label="Slide {{ loop.index }}"></button>
+      {% set index = index + 1 %}
+    {% endfor %}
+  </div>
+  <div class="carousel-inner">
+    {% set index = 0 %}
+    {% for slide in slides %}
+      <div class="carousel-item {% if loop.first %}active{% endif %}">
+        <img src="{{ asset('uploads/images/' ~ slide.photo) }}" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+        <h2 class="text-warning" style="font-size: 60px;">{{ slide.description }}</h2>
+        </div>
+      </div>
+      {% set index = index + 1 %}
+    {% endfor %}
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+
+<div class="container texte-entree text-center mt-4 rounded-2">
+
+
+    <h2 class="p-title mb-4 mt-4">Presentation</h2>
+  <p class="presentation-text">
+    Cet hôtel de luxe idéalement situé au cœur de la ville offre une expérience inoubliable à ses clients. Avec ses chambres spacieuses et ses services haut de gamme, Fotel répond aux attentes des voyageurs, qu'ils soient en déplacement professionnel ou en vacances. Les chambres sont élégamment décorées et équipées de commodités modernes pour votre confort. Notre équipe dévouée est là pour répondre à vos besoins et vous assurer un séjour parfait. Profitez de notre centre de remise en forme, de notre spa relaxant et de notre restaurant gastronomique pour compléter votre expérience. Réservez dès maintenant et laissez Fotel vous offrir un séjour mémorable.
+  </p>
+     <a href="{{ path('fortuna_chambres')}}" style="text-decoration: none; color:white;" >
+        <img src="{{ asset('assets/img/chambrePP.jpeg') }}" alt="image chambres" style="width: 300px; height: 200px; border-radius: 6%;" class="mb-4 mt-5" >
+ <h2 class="p-title">Chambres</h2>
+      <p class="presentation-text">
+        Nos chambres sont de qualité supérieure, offrant un confort exceptionnel et des services attentifs. Des chambres classiques bien aménagées aux suites luxueuses, chaque catégorie de chambre a été conçue avec soin pour répondre à vos besoins et vous offrir une expérience inoubliable. Nous mettons l'accent sur les détails et nous efforçons de créer une atmosphère accueillante et confortable, afin que vous puissiez vous détendre et profiter pleinement de votre séjour parmi nous.
+      </p></a>
+     
+    <div class="row">
+    <div class="col-6">
+     <a href="{{ path('fortuna_restaurant')}}" style="text-decoration: none; color:white;" >
+    <img src="{{ asset('assets/img/restoP.jpg') }}" alt="Image du restaurant" style="width: 300px; height: 200px; border-radius: 6%;" class="mb-4 mt-5">
+      <h2 class="p-title">Restaurant</h2>
+      <p class="presentation-text">
+        Détendez-vous et profitez de notre restaurant gastronomique qui propose une cuisine raffinée préparée par nos chefs talentueux. Découvrez une large gamme de plats exquis accompagnés d'une sélection de vins fins. Notre personnel attentionné sera à votre disposition pour vous fournir un service impeccable et vous faire vivre une expérience culinaire exceptionnelle.
+      </p>
+      </a>
+    </div>
+    <div class="col-6">
+     <a href="{{ path('fortuna_spa')}}" style="text-decoration: none; color:white;"  >
+    <img src="{{ asset('assets/img/spaP.jpg') }}" alt="Image du spa" style="width: 300px; height: 200px; border-radius: 6%;" class="mb-4 mt-5">
+      <h2 class="p-title">Spa</h2>
+      <p class="presentation-text">
+        Après une journée bien remplie, vous pourrez vous détendre et vous ressourcer dans notre spa relaxant. Offrez-vous un massage revigorant, profitez de nos installations de bien-être ou détendez-vous dans notre piscine chauffée. Notre spa est conçu pour vous offrir un moment de pure relaxation et de tranquillité.
+      </p>
+        </div></a>
+    </div><hr>
+  <p class="presentation-text">
+    Chez Fotel, nous nous engageons à rendre votre séjour inoubliable. Notre personnel amical et dévoué est disponible 24 heures sur 24 pour répondre à tous vos besoins. Que ce soit pour organiser des visites touristiques, réserver des transferts ou vous fournir des recommandations sur les attractions locales, nous sommes là pour vous aider à profiter pleinement de votre séjour parmi nous.
+  </p>
+  {# <a href="{{ path('en_savoir_plus') }}" class="btn btn-secondary">En savoir plus sur l'hôtel</a> #}
+</div>
+
+
+
+{% endblock %}

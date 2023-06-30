@@ -1,0 +1,101 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Commentaires{% endblock %}
+
+{% block body %}
+
+    <h1 class="text-center mt-4 mb-4 titre">Avis sur L'Hotel Fortuna</h1>
+    
+    <div class="text-end me-5">
+        <form action="{{ path('fortuna_avis') }}" method="GET">
+    <select id="categorie" name="categorie" class="rounded p-2">
+        <option value="">Toutes les catégories</option>
+        <option value="hotel">Hôtel</option>
+        <option value="chambres">Chambres</option>
+        <option value="restaurant">Restaurant</option>
+        <option value="service">Soins</option>
+    </select>
+    <button type="submit" class="btn btn-outline-warning mb-1">Filtrer</button>
+</form>
+    </div>
+
+    {% for avis in aviss %}
+    <div class="col-9 text-center text-light mb-4 backg border border-light rounded m-5 p-3" id="massage-relaxant">
+        <h3>{{ avis.auteur }}</h3>
+        <div class="diss">
+          <div class="row d-flex align-items-center">
+                       
+            <div class="col-2">
+                <div class="name" style="width:190px;">Categorie: {{avis.categorie}} </div>
+                <div class="price mt-3 mb-3">{{ avis.dateEnregistrement|date('d/m/Y H:i:s') }}</div>
+                {% if avis.note == 1 %}
+                <div><i class="bi bi-star"></i></div>
+                {% elseif avis.note == 2 %}
+                <div>
+                    <i class="bi bi-star"></i>
+                    <i class="bi bi-star"></i>
+                </div>
+
+                {% elseif avis.note == 3 %}
+                <div>
+                    <i class="bi bi-star"></i>
+                    <i class="bi bi-star"></i>
+                    <i class="bi bi-star"></i>
+                </div>
+                {% elseif avis.note == 4 %}
+                <div>
+                    <i class="bi bi-star"></i>
+                    <i class="bi bi-star"></i>
+                    <i class="bi bi-star"></i>
+                    <i class="bi bi-star"></i>
+                </div>
+                {% elseif avis.note == 5 %}
+                <div>
+                    <i class="bi bi-star"></i>
+                    <i class="bi bi-star"></i>
+                    <i class="bi bi-star"></i>
+                    <i class="bi bi-star"></i>
+                    <i class="bi bi-star"></i>
+                </div>
+                {% else %}
+                
+                {% endif %}             
+            </div>
+            <div class="col-md-8 text-center">
+              <div class="description mt-4 mb-4">{{avis.contenu|raw}}</div>
+            </div> 
+          </div>
+        </div>
+    </div>
+    {% endfor %}
+
+    <div class="text-center">
+    <a class="btn btn-primary text-warning rounded mb-4" href="" id="btnAjouterCommentaire">Ajouter un Commentaire</a>
+    </div>
+
+    <div id="formulaireCommentaire" class="mb-5 container" style="display: none;">
+        <h2 class="text-center mt-4">Laissez nous un avis</h2>
+
+        {{ form_start(form) }}
+        <div class="row mx-3">
+            <div class="col-md-6">
+              {{ form_row(form.auteur) }}
+            </div>
+            <div class="col-md-6"> 
+            {{ form_row(form.categorie)}}
+            </div>
+            <div class="col-md-6"> 
+            {{ form_row(form.contenu)}}
+            </div>
+            {{ form_row(form.note)}}
+        </div>
+        <div class="text-center">
+            <button class="btn btn-primary mt-2 rounded text-warning" type="submit">Valider</button>
+        </div>
+        {{ form_end(form) }}
+    </div>
+
+      <a href="#" class="scroll-to-top" title="Remonter en haut de la page">&#8593;</a>
+      <script src="{{ asset('assets/js/main.js')}}"></script>
+      <script src="{{ asset('assets/js/avis.js')}}"></script>
+{% endblock %}

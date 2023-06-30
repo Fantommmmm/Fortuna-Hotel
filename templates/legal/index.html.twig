@@ -1,0 +1,33 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Mentions Legales{% endblock %}
+
+{% block body %}
+
+<div class="text-center">
+  <div style="border: 2px solid white; padding: 20px;" class="text-light my-4">
+    <h1 class="text-light">Mentions légales</h1>
+
+    <p>Le site internet fortuna.com est la propriété et édité par :</p>
+
+    <p class="text-warning">{{ legal_data.company_name }}</p>
+    <p>SAS au capital de XX XXX XXX €, dont le siège social est situé {{ legal_data.address }}, enregistrée au RCS de XXX sous le numéro XXX XXX XXX.</p>
+
+    <p>Tel : {{ legal_data.phone }} - Mail : {{ legal_data.email }}</p>
+
+    <p>N° individuel de TVA : {{ legal_data.vat_number }}</p>
+    <p>SIRET : {{ legal_data.siret }}</p>
+
+    <p>Directeur de Publication : {{ legal_data.director }}</p>
+
+    <p>Hébergeur :</p>
+
+    <p class="text-warning">{{ legal_data.host_name }}</p>
+    <p>{{ legal_data.host_address }}</p>
+    <p>VAT Reg No. {{ legal_data.host_vat_number }}</p>
+    <p>Tel : {{ legal_data.host_phone }}</p>
+  </div>
+</div>
+
+
+{% endblock %}

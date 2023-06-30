@@ -1,0 +1,144 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Le Spa{% endblock %}
+
+{% block body %}
+
+{# <div class="container col-10 mb-5 mt-2"> #}
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{{ asset('assets/img/sap.jpeg') }}" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h2 class="text-dark">Spa</h2>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{{ asset('assets/img/sap1.jpg') }}" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h2 class="text-dark">Spa</h2>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{{ asset('assets/img/sap2.jpg') }}" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h2 class="text-dark">Spa</h2>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+{# </div> #}
+
+
+<h1 class="text-center text-white">Le Spa</h1>
+
+<div class="container col-8 text-light mb-5">
+    <p class="presentation-text">
+        Bienvenue dans notre spa, un véritable havre de paix et de relaxation conçu pour vous offrir une expérience inoubliable. Dès votre arrivée, vous serez accueilli dans un environnement calme et apaisant, avec une ambiance propice à la détente.
+    </p>
+    <p>
+        Notre équipe de professionnels qualifiés est là pour vous offrir une large gamme de soins et de traitements personnalisés, adaptés à vos besoins spécifiques. Que vous souhaitiez vous détendre après une journée bien remplie, vous ressourcer en profondeur ou simplement vous offrir un moment de bien-être, notre spa saura répondre à toutes vos attentes.
+    </p>
+
+</div>
+
+<div class="text-light">
+    <div class="row mt-5 pb-5">
+  <div class="col-6">
+    <h3 class="ms-5 mb-4 text-center">Massage</h3>
+    <div class="ms-5 text-start">
+        
+
+<p>
+    Une fois à l'intérieur du spa, vous aurez la possibilité de profiter de diverses activités et actions relaxantes. Laissez-vous dorloter avec des massages thérapeutiques qui ciblent les tensions musculaires et favorisent la circulation sanguine. Plongez dans un bain relaxant aromatique et laissez les jets d'eau apaiser vos muscles fatigués.
+</p>
+<p>
+    Notre équipe de professionnels expérimentés saura vous offrir des soins personnalisés adaptés à vos besoins spécifiques. Que vous souhaitiez vous détendre en profondeur, soulager le stress ou simplement vous offrir un moment de bien-être, notre spa est là pour répondre à toutes vos attentes. Vous serez entouré d'une ambiance calme et apaisante, propice à la relaxation et à la revitalisation.
+</p>
+<p>
+    En plus des massages et des bains relaxants, notre spa propose d'autres activités pour vous aider à vous ressourcer. Vous pourrez participer à des séances de yoga pour étirer votre corps et calmer votre esprit, ou profiter des bienfaits d'un sauna ou d'un hammam pour purifier votre peau et détendre vos muscles. Quelle que soit l'activité que vous choisissez, notre équipe dévouée sera là pour vous offrir une expérience spa inoubliable.
+</p>
+    </div>
+  </div>
+  <div class="col-6 text-end">
+        <img src="{{ asset('assets/img/spaP1.jpg') }}" style="width: 90%; border-radius: 2%;" alt="Massage relaxant" class="img-fluid me-5">
+  </div>
+</div> <hr>
+<div class="text-light">
+    <div class="row mt-5 pb-5">
+  <div class="col-6">
+    <h3 class="ms-5 mb-4 text-center">Sauna</h3>
+    <div class="ms-5 text-start">
+       <p>
+    Purifiez votre corps et votre esprit dans notre sauna ou hammam, des espaces dédiés à la détente et au bien-être. La chaleur enveloppante de ces installations vous permettra de détendre vos muscles, d'éliminer les toxines et de favoriser la circulation sanguine. Vous ressentirez instantanément un soulagement des tensions accumulées.
+</p>
+<p>
+    Notre spa dispose également d'une piscine et d'un jacuzzi, parfaits pour profiter d'un moment de détente absolue. Plongez dans l'eau apaisante de notre piscine et laissez votre corps se détendre en douceur. Les jets massants de notre jacuzzi offrent une expérience revitalisante, en ciblant les zones de tension pour un massage doux et apaisant.
+</p>
+<p>
+    Que vous choisissiez le sauna, le hammam, la piscine ou le jacuzzi, ces installations sont conçues pour vous aider à vous relaxer, à éliminer le stress et à vous ressourcer. Laissez-vous emporter par une sensation de bien-être et de légèreté, tandis que votre esprit se libère et que votre corps se régénère. Offrez-vous ces moments de pure détente pour retrouver énergie et vitalité.
+</p>
+    </div>
+  </div>
+  <div class="col-6 text-end">
+        <img src="{{ asset('assets/img/spaP2.jpg') }}" style="width: 90%; border-radius: 2%;" alt="Sauna et hammam" class="img-fluid me-5">
+  </div>
+</div> <hr>
+<div class="text-light">
+    <div class="row mt-5 pb-5">
+  <div class="col-6">
+    <h3 class="ms-5 mb-4 text-center">Yoga</h3>
+    <div class="ms-5 text-start">
+        <p>
+    Pour ceux qui recherchent une expérience holistique, notre spa propose des séances de yoga et de méditation guidées par des experts. Ces pratiques ancestrales vous permettront de vous connecter à votre esprit, votre corps et votre souffle, favorisant ainsi l'harmonie intérieure et la tranquillité d'esprit. Que vous soyez débutant ou pratiquant expérimenté, nos instructeurs qualifiés vous accompagneront tout au long de votre parcours vers le bien-être.
+</p>
+<p>
+    En plus des activités axées sur l'esprit, notre spa dispose d'un salon de beauté pour répondre à vos besoins esthétiques. Notre équipe de professionnels vous proposera des soins des ongles, des coiffures et des maquillages adaptés à votre style et à vos préférences. Laissez-vous chouchouter et resplendissez avec des soins personnalisés qui vous permettront de vous sentir rafraîchi et confiant.
+</p>
+<p>
+    Que vous choisissiez de vous engager dans une pratique de yoga ou de méditation pour équilibrer votre esprit, ou que vous optiez pour une transformation esthétique dans notre salon de beauté, ces expériences complémentaires vous permettront de prendre soin de vous de manière globale. Ressentez une profonde relaxation intérieure et extérieure grâce à nos programmes bien-être et révélez votre beauté naturelle avec nos services de beauté professionnels.
+</p>
+    </div>
+  </div>
+  <div class="col-6 text-end">
+        <img src="{{ asset('assets/img/spaP3.jpg') }}" style="width: 90%; border-radius: 2%;" alt="Séance de yoga" class="img-fluid me-5">
+        
+  </div>
+</div> <hr>
+<div class="text-light">
+    <div class="row mt-5 pb-5">
+  <div class="col-6">
+    <h3 class="ms-5 mb-4 text-center">Salon de beauté</h3>
+    <div class="ms-5 text-start">
+        
+<p>
+    Dans notre spa, chaque instant est précieux et nous mettons tout en œuvre pour que vous vous sentiez choyé et pris en charge. Notre équipe attentionnée et professionnelle est dévouée à votre bien-être et vous accueillera avec un sourire chaleureux. Notre objectif est de vous offrir une expérience spa complète, où vous pourrez vous détendre profondément, prendre soin de vous et retrouver un équilibre intérieur.
+</p>
+<p>
+    Laissez-vous guider par nos experts qui sauront vous conseiller et personnaliser vos soins en fonction de vos besoins spécifiques. Que vous optiez pour un massage thérapeutique, une séance de relaxation dans notre sauna ou hammam, ou une séance de yoga pour renforcer votre corps et apaiser votre esprit, chaque étape de votre parcours spa sera conçue pour vous offrir une expérience inoubliable.
+</p>
+<p>
+    Rejoignez-nous pour un voyage de relaxation et de bien-être où vous pourrez vous évader du stress de la vie quotidienne et vous reconnecter avec vous-même. Profitez de l'atmosphère paisible et sereine de notre spa, où chaque détail a été pensé pour créer une ambiance propice à la détente et à la revitalisation. Nous sommes impatients de vous offrir une expérience spa exceptionnelle et de vous aider à trouver un équilibre intérieur durable.
+</p>
+    </div>
+  </div>
+  <div class="col-6 text-end">
+        <img src="{{ asset('assets/img/spaP4.jpg') }}" style="width: 90%; border-radius: 2%;" alt="Salon de beauté" class="img-fluid me-5">
+  </div>
+</div> <hr>
+
+{% endblock %}

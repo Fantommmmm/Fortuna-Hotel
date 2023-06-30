@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Commande{% endblock %}
+
+{% block body %}
+    <h1>Commande</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ commande.id }}</td>
+            </tr>
+            <tr>
+                <th>Date_arrivee</th>
+                <td>{{ commande.dateArrivee ? commande.dateArrivee|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Date_depart</th>
+                <td>{{ commande.dateDepart ? commande.dateDepart|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Prix_total</th>
+                <td>{{ commande.prixTotal }}</td>
+            </tr>
+            <tr>
+                <th>Prenom</th>
+                <td>{{ commande.prenom }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ commande.nom }}</td>
+            </tr>
+            <tr>
+                <th>Telephone</th>
+                <td>{{ commande.telephone }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ commande.email }}</td>
+            </tr>
+            <tr>
+                <th>Date_enregistrement</th>
+                <td>{{ commande.dateEnregistrement ? commande.dateEnregistrement|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_commande_index') }}">back to list</a>
+
+    <a href="{{ path('app_commande_edit', {'id': commande.id}) }}">edit</a>
+
+    {{ include('commande/_delete_form.html.twig') }}
+{% endblock %}

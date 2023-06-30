@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Actualités{% endblock %}
+
+{% block body %}
+
+<div class="container">
+    <h2 class="text-center text-light my-3 mb-3">Actualités</h2>
+
+    <div class="card mb-3 backg text-light">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="{{ asset('assets/img/chambre-luxe.jpg') }}" class="img-fluid" alt="Image actualité">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">Nouvelle suite de luxe inaugurée</h5>
+                    <p>Nous sommes ravis d'annoncer l'ouverture de notre nouvelle suite de luxe au sein de notre hôtel Fortuna. Cette suite a été spécialement conçue pour offrir à nos clients une expérience haut de gamme inégalée. Dotée d'un design élégant et d'une attention minutieuse aux détails, cette suite incarne le summum du confort et du luxe.</p>
+<p>En entrant dans cette suite exceptionnelle, vous serez immédiatement séduit par son ambiance raffinée et son atmosphère apaisante. Chaque élément a été soigneusement sélectionné pour créer une oasis de tranquillité et de bien-être. Les matériaux luxueux, les couleurs harmonieuses et les textures agréables vous envelopperont dans une expérience sensorielle unique.</p>
+                    <p class="card-text"><small class="text-light">Publié le 15 janvier 2023</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card mb-3 backg text-light">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="{{ asset('assets/img/fotel1.jpg') }}" class="img-fluid" alt="Image actualité">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">Offre spéciale : Réservez 3 nuits, payez-en 2</h5>
+                    <p>Profitez de notre offre spéciale pour un séjour prolongé dans notre hôtel Fortuna. Réservez 3 nuits et n'en payez que 2, une opportunité à ne pas manquer ! Cette offre exclusive vous permettra de profiter pleinement du luxe, du confort et des services haut de gamme de notre établissement.</p>
+<p>Détendez-vous dans nos chambres élégantes, savourez des repas exquis dans nos restaurants raffinés et profitez de nos installations de bien-être de premier ordre. Que vous soyez en voyage d'affaires ou en escapade de détente, notre offre spéciale vous garantit un séjour inoubliable, à un tarif avantageux. Réservez dès maintenant et vivez une expérience hôtelière exceptionnelle avec Fortuna.</p>
+                    <p class="card-text"><small class="text-light">Publié le 5 février 2023</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ajoutez d'autres actualités ici -->
+
+</div>
+
+
+{% endblock %}

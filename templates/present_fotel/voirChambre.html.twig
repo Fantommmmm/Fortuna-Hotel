@@ -1,0 +1,26 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Chambre{% endblock %}
+
+{% block body %}
+  <div class="text-light">
+    <div class="row mt-5 mb-5 pb-5">
+    <div class="col-6">
+      <h3 class="ms-5 mb-4 text-center">{{ chambre.titre }}</h3>
+      <div class="ms-5 text-start">
+        <p>{{ chambre.descriptionCourte| raw() }}</p>
+        <p>{{ chambre.descriptionLongue| raw() }}</p>
+        <h5 class="text-end">{{ chambre.prixJournalier }}€</h5>
+      <p>{{ chambre.dateEnregistrement|date('d/m/Y à H:m:s') }}</p>
+      </div>
+      <div class="text-center">
+        <a href=" {{ path('app_commande_new', {id: chambre.id})}} " class="btn btn-outline-warning">Réserver</a>
+      </div>
+    </div>
+    <div class="col-6 text-end">
+      <img src="{{ asset('assets/img/' ~ chambre.photo) }}" alt="Photo de la chambre" style="width: 90%; border-radius: 2%;" class="me-5">
+    </div>
+  </div>
+  <hr>
+  </div>
+{% endblock %}

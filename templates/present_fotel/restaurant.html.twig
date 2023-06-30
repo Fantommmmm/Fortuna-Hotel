@@ -1,0 +1,173 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Chambres{% endblock %}
+
+{% block body %}
+
+
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{{ asset('assets/img/restoP.jpg') }}" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5 class="text-dark">Restaurant</h5>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{{ asset('assets/img/restoP3.jpg') }}" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5 class="text-dark">Restaurant</h5>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{{ asset('assets/img/restoP4.webp') }}" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5 class="text-dark">Restaurant</h5>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  
+<div class="mb-4 mt-5 text-center text-light">
+  <h2>Restaurant</h2>
+</div>
+
+<div class="container col-8 text-light mb-5">
+    <p class="presentation-text ">
+        Bienvenue dans notre restaurant gastronomique, où la passion culinaire rencontre l'élégance. Notre équipe de chefs talentueux s'efforce de créer des plats raffinés et savoureux, mettant en valeur les meilleurs ingrédients de saison. Que ce soit pour un dîner romantique, un déjeuner d'affaires ou une occasion spéciale, notre restaurant vous offre une expérience culinaire exceptionnelle.
+    </p>
+    <p>
+        Laissez-vous séduire par notre menu varié, qui allie créativité et traditions culinaires. Chaque plat est préparé avec soin, en utilisant des produits frais et de qualité, pour vous offrir une explosion de saveurs. Notre carte des vins soigneusement sélectionnée complétera votre repas, avec des options qui s'accordent parfaitement avec chaque plat.
+    </p>
+    <p>
+        Notre cadre élégant et raffiné crée une atmosphère chaleureuse et accueillante. Que vous choisissiez de dîner dans notre salle à manger élégante ou sur notre terrasse extérieure, vous serez entouré d'une ambiance conviviale et d'un service attentif. Notre personnel dévoué est là pour répondre à vos besoins et vous offrir une expérience gastronomique inoubliable.
+    </p>
+    <p>
+        Nous accordons une attention particulière aux détails, depuis la présentation artistique des plats jusqu'à l'harmonie des saveurs. Chaque bouchée est une découverte gustative, une expérience sensorielle qui ravira vos papilles. Que vous soyez amateur de cuisine internationale ou de spécialités locales, notre restaurant est l'endroit idéal pour satisfaire vos envies gastronomiques.
+    </p>
+    <p>
+        Rejoignez-nous pour un voyage culinaire mémorable et laissez-vous emporter par les délices de notre restaurant. Découvrez une cuisine exquise, un service impeccable et une ambiance unique qui font de notre restaurant une référence incontournable pour les amateurs de bonne cuisine.
+    </p>
+</div>
+
+
+<div class="text-center mb-3 me-5">
+  <button onclick="showCard('menu-matin')" class="btn btn-warning">Menu du Matin</button>
+  <button onclick="showCard('menu-midi')" class="btn btn-warning">Menu du Midi</button>
+  <button onclick="showCard('menu-soir')" class="btn btn-warning">Menu du Soir</button>
+</div>
+
+<div id="menu-matin" class="container border border-light bg-dark rounded col-6 text-light mb-5 resto" style="display: none;">
+    <h3 class="text-center">Menu du Matin :</h3>
+    <p>Options salées :</p>
+    <ul>
+        <li><strong class="text-warning">Petit-déjeuner continental</strong> - Un assortiment de viennoiseries fraîches, de pain, de confitures, de beurre et de jus d'orange frais.</li>
+        <li><strong class="text-warning">Omelette au choix</strong> - Omelette préparée avec des œufs bio et accompagnée de légumes de saison, de fromage et de pain grillé.</li>
+        <li><strong class="text-warning">Avocado Toast</strong> - Pain grillé recouvert d'avocat écrasé, de tomates cerises, de graines de sésame et d'une touche de citron.</li>
+    </ul>
+    <p>Options sucrées :</p>
+    <ul>
+        <li><strong class="text-warning">Pancakes aux fruits</strong> - Pancakes moelleux servis avec des fruits frais, du sirop d'érable et une touche de crème chantilly.</li>
+        <li><strong class="text-warning">Pain perdu</strong> - Tranches de pain brioché trempées dans un mélange d'œufs, de lait et de vanille, puis dorées à la poêle et servies avec des fruits et du sirop.</li>
+        <li><strong class="text-warning">Smoothie Bowl</strong> - Un bol de smoothie épais garni de granola croustillant, de fruits frais et de noix.</li>
+    </ul>
+    <p>Options santé :</p>
+    <ul>
+        <li><strong class="text-warning">Bowl au yogourt</strong> - Un bol de yogourt grec avec des fruits frais, du muesli, des graines de chia et un filet de miel.</li>
+        <li><strong class="text-warning">Porridge aux baies</strong> - Un mélange chaud de flocons d'avoine, de lait d'amande et de baies mélangées, agrémenté de noix et de cannelle.</li>
+        <li><strong class="text-warning">Assiette de fruits</strong> - Un assortiment de fruits frais de saison, coupés en morceaux et disposés de manière attrayante.</li>
+    </ul>
+    <p>Boissons :</p>
+    <ul>
+        <li><strong class="text-warning">Café</strong> - Espresso, cappuccino, latte ou café filtre, préparés avec des grains de café fraîchement moulus.</li>
+        <li><strong class="text-warning">Thé</strong> - Un choix de thés aromatiques, comme le thé vert, le thé noir ou les infusions aux fruits.</li>
+        <li><strong class="text-warning">Jus de fruits frais</strong> - Une sélection de jus de fruits pressés à froid, comme l'orange, la pastèque, le melon ou le pamplemousse.</li>
+    </ul>
+    <p>N'oubliez pas que ces exemples de menus sont fictifs et peuvent être adaptés en fonction des choix du restaurant et des préférences culinaires spécifiques.</p>
+</div>
+
+<div id="menu-midi" class="container border border-light bg-dark rounded col-6 text-light mb-5 resto" style="display: none;">
+    <h3 class="text-center">Menu du Midi :</h3>
+    <p><strong>Entrées :</strong></p>
+    <ul>
+        <li><strong class="text-warning">Salade César</strong> - Salade romaine, poulet grillé, croûtons, parmesan, et sauce César.</li>
+        <li><strong class="text-warning">Soupe du jour</strong> - Une soupe maison préparée avec des ingrédients frais et de saison.</li>
+        <li><strong class="text-warning">Bruschetta à la tomate</strong> - Pain grillé frotté à l'ail, garni de tomates fraîches, basilic et huile d'olive.</li>
+    </ul>
+    <p><strong>Plats principaux :</strong></p>
+    <ul>
+        <li><strong class="text-warning">Steak frites</strong> - Un steak juteux accompagné de frites croustillantes et d'une sauce au choix.</li>
+        <li><strong class="text-warning">Risotto aux champignons</strong> - Un délicieux risotto crémeux aux champignons sauvages.</li>
+        <li><strong class="text-warning">Penne à la vodka</strong> - Des pâtes penne servies dans une sauce à la vodka, à la crème et aux tomates.</li>
+    </ul>
+    <p><strong>Desserts :</strong></p>
+    <ul>
+        <li><strong class="text-warning">Tarte au citron meringuée</strong> - Une tarte légère au citron garnie de meringue dorée.</li>
+        <li><strong class="text-warning">Fondant au chocolat</strong> - Un gâteau au chocolat fondant servi avec une boule de glace à la vanille.</li>
+        <li><strong class="text-warning">Crème brûlée</strong> - Une crème vanillée cuite au four, recouverte d'une fine couche de caramel croquant.</li>
+    </ul>
+    <p><strong>Boissons :</strong></p>
+    <ul>
+        <li>  Eau minérale plate ou pétillante</li>
+        <li>  Sodas et boissons gazeuses</li>
+        <li>  Jus de fruits frais</li>
+        <li>  Thés glacés</li>
+        <li>  Bières locales et internationales</li>
+        <li>  Vins rouges, blancs et rosés</li>
+        <li>  Sélection de cocktails et spiritueux</li>
+        <li>  Café et thé</li>
+    </ul>
+</div>
+
+<div id="menu-soir" class="container border border-light bg-dark rounded col-6 text-light mb-5 resto" style="display: none;">
+    <h3 class="text-center">Menu du Soir :</h3>
+    <p><strong>Amuse-bouche :</strong></p>
+    <ul>
+        <li><strong class="text-warning">Assiette de dégustation</strong> - Une sélection de hors-d'œuvre créatifs et raffinés pour vous mettre en appétit.</li>
+    </ul>
+    <p><strong>Entrées :</strong></p>
+    <ul>
+        <li><strong class="text-warning">Carpaccio de bœuf</strong> - Des tranches fines de bœuf cru marinées dans une vinaigrette aux herbes, accompagnées de copeaux de parmesan et de roquette.</li>
+        <li><strong class="text-warning">Velouté de potiron</strong> - Une soupe veloutée à base de potiron, garnie de croûtons croustillants et de graines de citrouille.</li>
+    </ul>
+    <p><strong>Plats principaux :</strong></p>
+    <ul>
+        <li><strong class="text-warning">Magret de canard</strong> - Un magret de canard rôti, servi avec une sauce aux cerises et des légumes de saison.</li>
+        <li><strong class="text-warning">Filet de saumon poêlé</strong> - Un filet de saumon frais, poêlé à la perfection et accompagné de purée de pommes de terre à l'aneth.</li>
+        <li><strong class="text-warning">Tagliatelles aux fruits de mer</strong> - Des tagliatelles fraîches avec une sauce crémeuse aux fruits de mer et aux herbes.</li>
+    </ul>
+    <p><strong>Desserts :</strong></p>
+    <ul>
+        <li><strong class="text-warning">Profiteroles</strong> - Des choux à la crème glacée, nappés de sauce au chocolat chaud et garnis de noisettes caramélisées.</li>
+        <li><strong class="text-warning">Tiramisu</strong> - Un classique italien revisité, avec des couches de biscuits imbibés de café et de crème mascarpone.</li>
+        <li><strong class="text-warning">Assortiment de fromages</strong> - Une sélection de fromages affinés accompagnée de confiture de figues et de pains spéciaux.</li>
+    </ul>
+    <p><strong>Boissons :</strong></p>
+    <ul>
+        <li>Vins fins et millésimés, soigneusement sélectionnés pour accompagner chaque plat</li>
+        <li>Champagnes et proseccos</li>
+        <li>Bières artisanales</li>
+        <li>Boissons sans alcool, telles que des mocktails et des boissons fruitées</li>
+        <li>Cocktails signature et classiques</li>
+        <li>Whiskies, cognacs et digestifs</li>
+        <li>Café et thé</li>
+    </ul>
+</div>
+
+
+
+<script src="{{ asset('assets/js/restaurant.js') }}"></script>
+{% endblock %}

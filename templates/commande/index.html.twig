@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Commande index{% endblock %}
+
+{% block body %}
+    <h1 class="text-light text-center my-3">Mes commandes</h1>
+    {% if commandes is empty %}
+        <p class="text-center">Aucune commande trouvée.</p>
+    {% else %}
+    <div class="d-flex justify-content-center">
+        <table class="table table-striped-columns mt-5 w-75 table-dark text-dark">
+            <thead>
+                <tr>
+                    <th>ID Commande</th>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Telephone</th>
+                    <th>Email</th>
+                    <th>Date d'arrivée</th>
+                    <th>Date de Départ</th>
+                    <th>Chambre</th>
+                    <th>prix Chambre</th>
+                    <th>Prix total</th>
+                    <th>Date d'enregistrement</th>
+                    <th>Options</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for commande in commandes %}
+    <tr>
+        <td>{{ commande.id }}</td>
+        <td>{{ commande.nom }}</td>
+        <td>{{ commande.prenom }}</td>
+        <td>{{ commande.telephone }}</td>
+        <td>{{ commande.email }}</td>
+        <td>{{ commande.dateArrivee|date('Y-m-d') }}</td>
+        <td>{{ commande.dateDepart|date('Y-m-d') }}</td>
+        <td>{{ commande.chambre.titre }}</td>
+        <td>{{ commande.chambre.prixJournalier }}</td>
+        <td>{{ commande.prixTotal }}</td>
+        <td>{{ commande.dateEnregistrement|date('Y-m-d H:i:s') }}</td>
+        <td>
+            <a href="{{ path('app_commande_delete', {'id': commande.id}) }}" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette commande ?')" class="text-warning ms-3" style="font-size: 1.4rem;"><i class="bi bi-trash"></i></a>
+        </td>
+    </tr>
+{% endfor %}
+            </tbody>
+        </table>
+        </div>
+    {% endif %}
+{% endblock %}

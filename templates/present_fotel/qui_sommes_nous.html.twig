@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Qui sommes-nous ?{% endblock %}
+
+{% block body %}
+<h1 class="text-center text-white my-4">Qui sommes-nous ?</h1>
+
+<div class="container col-8 text-light mb-5">
+    <p class="presentation-text">
+        Cette histoire commence en 1885, une époque où le monde était en pleine effervescence et où les rêves les plus audacieux pouvaient devenir réalité. C'est à cette époque que naquit le personnage énigmatique de Fantomm, une personne dotée d'une chance extraordinaire dans les jeux de hasard. Accumulant une fortune colossale grâce à ses victoires incessantes dans les casinos, Fantomm décida de concrétiser son rêve le plus cher : créer son propre hôtel de renommée mondiale.
+    </p>
+        <img src="{{ asset('assets/img/ancienH.jpg') }}" style="width: 100%; border-radius: 1%;" class="d-block " alt="...">
+    <p class="presentation-text my-4">
+        Avec l'argent gagné grâce à sa chance légendaire, Fantomm entreprit la construction de son hôtel, une véritable prouesse architecturale qui allait marquer l'histoire. Chaque détail fut soigneusement pensé, des magnifiques façades aux intérieurs somptueux, en passant par les jardins luxuriants qui entouraient l'établissement. L'hôtel de Fantomm allait devenir un véritable joyau de l'industrie hôtelière, attirant les voyageurs du monde entier en quête de luxe et d'exclusivité.
+    </p>
+
+    <p>
+        L'ouverture de l'hôtel de Fantomm fut un événement grandiose, rassemblant l'élite de la société de l'époque. Les invités furent éblouis par la splendeur et le raffinement de ce lieu unique. L'hôtel offrait des services inégalés, des chambres somptueuses aux équipements modernes, en passant par des restaurants gastronomiques et des espaces de divertissement haut de gamme. C'était un endroit où les visiteurs pouvaient se sentir transportés dans un monde de luxe et de confort.
+    </p class="presentation-text my-4">
+    <div class="row">
+    <div class="col-8 text-center"><img src="{{ asset('assets/img/persA.jpg') }}" style="width: 30%; border-radius: 1%;" class="d-block" alt="..."></div>
+    <div class="col-4 "> <p class="presentation-text my-4 text-end">
+        Depuis lors, l'hôtel de Fantomm est devenu une véritable référence dans l'industrie hôtelière. Son nom est synonyme d'excellence, d'élégance et d'hospitalité incomparable. Des générations de voyageurs ont foulé ses sols et ont vécu des expériences inoubliables dans ses murs chargés d'histoire. Aujourd'hui encore, l'hôtel continue d'émerveiller ses clients en offrant un service d'exception et en perpétuant l'héritage de son fondateur visionnaire, Fantomm.
+    </p></div>
+    </div>
+</div>
+
+{% endblock %}
